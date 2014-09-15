@@ -1,3 +1,11 @@
+def get_params_from_list(arglist):
+    contains_hyphen = False
+    for i in arglist:
+        if '-' in i:
+            contains_hyphen = True
+            break
+    if not contains_hyphen: return arglist
+
 def get_params(argstr):
     if '-' not in argstr:
         return argstr.split()
@@ -12,9 +20,10 @@ def get_params(argstr):
             parts = arg.strip().split()
             key = parts[0];
             val = ' '.join(parts[1:])
+            is_full_name = False
         else:
-            key=arg[0]
-            val=arg[1:]
+            key=arg[0].strip()
+            val=arg[1:].strip()
         if not val:
             val = True
         elif ',' in val:
