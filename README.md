@@ -20,6 +20,15 @@ Value Types Supported
 
 Usage
 =====
+```
+import sys
+import pyparams
+
+paramstr = ' '.join(sys.argv[1:])
+params = get_params(paramstr)
+port = params['port']
+```
+
 There are two intended uses that both accept a string of all the parameters joined by whitespace:
 - Loose Parameter Parser: returns a dictionary of key/value pairs of all parameters passed in
 - Strict Parameter Parser: accepts a dictionary of recognized keys (and expected types), and returns a dict matching those keys, or will throw an exception if an invalid parameter is found
