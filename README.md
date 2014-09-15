@@ -1,25 +1,23 @@
-pyparams
-========
+# pyparams
 
 Python3 module to parse CLI parameters. Feedback welcome
 
-Parameter Types Supported
-=========================
+## Parameter Types Supported
 
 - Single char parameters that are preceded by a single '-' (as flags or values)
   - '-v'; '-v 5'; '-v5'; '-v5, 6, 7';  '-v5,6,7'; '-v 5,6,7'
 - Named parameters that are preceded by '--' (as flags or values)
   - '--flag'; '--value 5'; '--value 5,6,7'
 
-Value Types Supported
-=====================
+## Value Types Supported
+
 - Flags
   - returned dictionary element will have a value of True (planning to specify False for strict parameters)
 - String
 - List of Strings
 
-Usage
-=====
+## Usage
+
 ```
 import sys
 import pyparams
