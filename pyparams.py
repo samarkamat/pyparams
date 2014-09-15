@@ -29,7 +29,6 @@ def get_params(argstr):
         elif ',' in val:
             val = [i.strip() for i in val.split(',')]
         ret[key] = val
-
     return ret
 
 def get_params_strict (argstr, param_dict):
