@@ -1,7 +1,7 @@
 pyparams
 ========
 
-python module to manage CLI parameters
+Python3 module to parse CLI parameters. Feedback welcome
 
 Parameter Types Supported
 =========================
