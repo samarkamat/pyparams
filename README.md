@@ -1,6 +1,6 @@
 # pyparams
 
-Python3 module to parse CLI parameters. argparse seemed too heavy duty for simple tools I was writing, so this aims to be something simpler. Feedback welcome!
+Python3 module to parse CLI parameters. argparse seemed too heavy-duty for some simple tools I was writing, so this aims to be something (appropriately) simpler. Feedback welcome!
 
 ## Parameter Types Supported
 
