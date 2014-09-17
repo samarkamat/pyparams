@@ -1,3 +1,4 @@
+import re
 def get_params_from_list(arglist):
     contains_hyphen = False
     for i in arglist:
@@ -17,8 +18,8 @@ def get_params(argstr):
         key=''
         val=''
         if is_full_name:
-            parts = arg.strip().split()
-            key = parts[0];
+            parts = re.split('=| ', arg.strip(), 1)
+            key = parts[0]
             val = ' '.join(parts[1:])
             is_full_name = False
         else:

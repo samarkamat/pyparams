@@ -32,7 +32,7 @@ def test_print_param_dict():
     pyparams.print_param_dict({'abba': 4, 'beatles' : 6})
 
 def test_get_params():
-    teststr = "--named_flag -f --named_value 5 -v5 --named_list 5,6,7 -l5,6,7"
+    teststr = "--named_flag -f --named_value=5 -v5 --named_list 5,6,7 -l5,6,7"
     params = pyparams.get_params(teststr)
     print (params)
 
