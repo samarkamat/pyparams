@@ -1,11 +1,11 @@
 # pyparams
 
-Python3 module to parse CLI parameters. Feedback welcome
+Python3 module to parse CLI parameters. argparse seemed too heavy-duty for some simple tools I was writing, so this aims to be something (appropriately) simpler. Feedback welcome!
 
 ## Parameter Types Supported
 
 - Single char parameters that are preceded by a single '-' (as flags or values)
-  - '-v'; '-v 5'; '-v5'; '-v5, 6, 7';  '-v5,6,7'; '-v 5,6,7'
+  - '-v'; '-v 5'; '-v5'; '-v5, 6, 7';  '-v5,6,7'; '-v 5,6,7'; '-v=5'
 - Named parameters that are preceded by '--' (as flags or values)
   - '--flag'; '--value 5'; '--value 5,6,7'
 
