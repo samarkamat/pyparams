@@ -2,40 +2,16 @@
 
 import sys
 import pyparams
+import unittest
 
-def test_abbrev_flag():
-    flagstr = 'a'
-    key = flagstr[0]
-    val = flagstr[1:]
+class ParamsTest (unittest.TestCase):
+    def test_full(self):
+        test_str = "--named_flag -f --named_value=5 -v5 --named_list 5,6,7 -l5,6,7"
+        expected_params = {'named_value': '5', 'l': ['5', '6', '7'], 'named_list': ['5', '6', '7'], 'named_flag': True, 'f': True, 'v': '5'}
+        test_params = pyparams.get_params_from_str(test_str)
+        self.assertTrue(test_params == expected_params)
 
-    print ("key: '" + key + "'")
-    print ("val: '" + val + "'")
+if __name__ == '__main__':
+    unittest.main()
 
-def test_argv():
-    print ("This is the name of the script: " + sys.argv[0])
-    print ("Number of arguments: "+ str(len(sys.argv)))
-    print ("Arguments, ignoring the script name: " + str(sys.argv[1:]))
-
-def test_spliting_mixed():
-    teststr = "--named_flag -f --named_value 5 -v 5"
-    print (teststr.split('-')[1:])
-
-def test_splitting_in_list():
-    testlist = ["word", "two words", "comma,separated, words"]
-    print (list (n.split(',') for n in testlist))
-
-def test_keyval_single_item():
-    singleitemlist = ['a']
-    print ("singleitemlist: '" + ' '.join(singleitemlist[1:]) + "'")
-
-def test_print_param_dict():
-    pyparams.print_param_dict({'abba': 4, 'beatles' : 6})
-
-def test_get_params():
-    teststr = "--named_flag -f --named_value=5 -v5 --named_list 5,6,7 -l5,6,7"
-    params = pyparams.get_params(teststr)
-    print (params)
-
-
-test_get_params()
 

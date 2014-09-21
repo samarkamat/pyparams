@@ -1,13 +1,8 @@
 import re
 def get_params_from_list(arglist):
-    contains_hyphen = False
-    for i in arglist:
-        if '-' in i:
-            contains_hyphen = True
-            break
-    if not contains_hyphen: return arglist
+    return get_params_from_str(' '.join(arglist))
 
-def get_params(argstr):
+def get_params_from_str(argstr):
     if '-' not in argstr:
         return argstr.split()
     args = argstr.split('-')[1:];
@@ -36,6 +31,6 @@ def get_params_strict (argstr, param_dict):
     print_param_dict(param_dict)
     return
 
-def print_param_dict (param_dict):
+def get_param_usage_string (param_dict):
     print ("would print param dict here:")
     print (param_dict)
