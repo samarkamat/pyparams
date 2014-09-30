@@ -10,7 +10,7 @@ Python3 module to parse CLI parameters. argparse seemed too heavy-duty for some 
 - Named parameters that are preceded by '--' (as flags or values)
   - '--flag'
   - '--value=5'
-- Anonymous values are parameters that have no keys (think `cp file1 file2`). In the returned map, these values are appended to a list with a key of ''
+- Anonymous values are parameters that have no keys (think `cp file1 file2`). In the returned map, these values are appended to a list with a key of '' like `{'': ['file1', 'file2']}`
 
 ## Value Types Supported
 
