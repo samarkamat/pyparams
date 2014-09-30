@@ -11,14 +11,14 @@ class ParamsTest (unittest.TestCase):
         #    'named_list': ['5', '6', '7'], 'named_flag': True, 
         #    'f': True, 'v': '5'}
         self.test_argv = ['--named_flag', '--named_value', '5', '--named_list', '4,5,6', 
-            '-f', '-v=5',  '--quote_val', '"This is a quoted value"', 
+            '-f', '-wv=5',  '--quote_val', '"This is a quoted value"', 
             'anon_val', '"anonymous quoted val"',
             '--named_val_with_equal=5', '--named_list_with_equal=8,9,0']
         self.expected_params = {'named_flag': True, 'named_value': '5', 
             'named_list': ['4','5','6'], 
             'f': True, 'v': '5', 'quote_val': 'This is a quoted value', 
             '': ['anon_val', 'anonymous quoted val'], 'named_val_with_equal': '5',
-            'named_list_with_equal': ['8','9','0']}
+            'named_list_with_equal': ['8','9','0'], 'w': True}
 
 
 #    def test_param_str(self):
