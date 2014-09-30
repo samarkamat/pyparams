@@ -60,6 +60,8 @@ def get_params_from_list(arglist):
         else:
             #print ('\tvalue, current key is ', key)
             # not key
+            if arg[0] == '"' and arg[-1] == '"':
+                arg = arg[1:-1]
             if ',' in arg:
                 arg = super_split(arg, ',')
             if key == '':

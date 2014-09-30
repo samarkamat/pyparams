@@ -16,8 +16,8 @@ class ParamsTest (unittest.TestCase):
             '--named_val_with_equal=5', '--named_list_with_equal=8,9,0']
         self.expected_params = {'named_flag': True, 'named_value': '5', 
             'named_list': ['4','5','6'], 
-            'f': True, 'v': '5', 'quote_val': '"This is a quoted value"', 
-            '': ['anon_val', '"anonymous quoted val"'], 'named_val_with_equal': '5',
+            'f': True, 'v': '5', 'quote_val': 'This is a quoted value', 
+            '': ['anon_val', 'anonymous quoted val'], 'named_val_with_equal': '5',
             'named_list_with_equal': ['8','9','0']}
 
 
