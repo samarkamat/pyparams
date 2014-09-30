@@ -26,7 +26,7 @@ class ParamsTest (unittest.TestCase):
 #       self.assertTrue(test_params == self.expected_params)
 #
     def test_param_list(self):
-        test_params = pyparams.get_params_from_list(self.test_argv)
+        test_params = pyparams.get_params(self.test_argv)
         #print (test_params)
         self.assertEqual(test_params, self.expected_params)
 

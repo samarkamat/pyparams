@@ -6,7 +6,7 @@ def super_split(string, delim):
         ret.remove('')
     return ret
 
-def get_params_from_list(arglist):
+def get_params(arglist):
     ret = dict()
     ret[''] = []
     is_key = False
